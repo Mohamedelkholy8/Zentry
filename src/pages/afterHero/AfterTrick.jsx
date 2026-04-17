@@ -14,10 +14,10 @@ function AfterTrick() {
     const initialX = gsap.getProperty(trick, "x") || 0;
     const initialY = gsap.getProperty(trick, "y") || 0;
 
-    const rotXSetter = gsap.quickSetter(trick, "rotationX", "deg");
-    const rotYSetter = gsap.quickSetter(trick, "rotationY", "deg");
-    const posXSetter = gsap.quickSetter(trick, "x", "px");
-    const posYSetter = gsap.quickSetter(trick, "y", "px");
+    const rotXTo = gsap.quickTo(trick, "rotationX", { duration: 1, ease: "power3.out" });
+    const rotYTo = gsap.quickTo(trick, "rotationY", { duration: 1, ease: "power3.out" });
+    const posXTo = gsap.quickTo(trick, "x", { duration: 1, ease: "power3.out" });
+    const posYTo = gsap.quickTo(trick, "y", { duration: 1, ease: "power3.out" });
 
     const handleMouseMove = (e) => {
       const xPercent = (e.clientX / window.innerWidth) - 0.5;
@@ -31,10 +31,10 @@ function AfterTrick() {
       const newPosX = initialX + (xPercent * transSensitivity);
       const newPosY = initialY + (yPercent * transSensitivity);
 
-      rotXSetter(newRotX);
-      rotYSetter(newRotY);
-      posXSetter(newPosX);
-      posYSetter(newPosY);
+      rotXTo(newRotX);
+      rotYTo(newRotY);
+      posXTo(newPosX);
+      posYTo(newPosY);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -45,8 +45,8 @@ function AfterTrick() {
         height: '400px',
         borderRadius: '16px',
         rotateZ: 0,
-        rotateX: 15,
-        rotateY: 15,
+        rotateX: 10,
+        rotateY: 20,
         x: 0,
         y: 0,
       },  {
@@ -80,7 +80,7 @@ function AfterTrick() {
     };
   });
   return (
-    <div id="trickWindow" className="h-screen w-screen flex justify-center items-center ">
+    <div id="trickWindow" className="relative h-screen w-screen flex justify-center items-center overflow-visible">
       <div ref={trickRef} className="w-[300px] h-[400px] trickBox"></div>
       <div className="absolute bottom-16 text-center text-[9px] font-medium z-[100] ">
         <h6 className="font-semibold">A Programmable reality for Human-AI co-evolution</h6>
