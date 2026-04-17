@@ -82,7 +82,7 @@ function AfterTrick() {
   return (
     <div id="trickWindow" className="h-screen w-screen flex justify-center items-center ">
       <div ref={trickRef} className="w-[300px] h-[400px] trickBox"></div>
-      <div className="absolute bottom-16 text-center text-[9px] font-medium z-[-1] ">
+      <div className="absolute bottom-16 text-center text-[9px] font-medium z-[100] ">
         <h6 className="font-semibold">A Programmable reality for Human-AI co-evolution</h6>
         <p className="opacity-[0.5]">Your journy fuels richer data, smarter agents, and<br/>cicilization-scale intelligence, all white<br/>rewarding you.</p>
       </div>
