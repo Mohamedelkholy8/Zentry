@@ -39,7 +39,17 @@ function AfterTrick() {
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    gsap.to(trick, {
+    gsap.fromTo(trick,
+      {
+        width: '300px',
+        height: '400px',
+        borderRadius: '16px',
+        rotateZ: 0,
+        rotateX: 15,
+        rotateY: 15,
+        x: 0,
+        y: 0,
+      },  {
       scrollTrigger: {
         start: 'top top',
         end: 'bottom top',

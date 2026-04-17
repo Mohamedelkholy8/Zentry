@@ -137,7 +137,7 @@ function Products({ isProduct }) {
                 </div>
             </div>
             {/* Wrapper handles the positioning and centering (translate-y-[-50%]) */}
-            <div className="w-1/2 fixed right-10 top-[50%] translate-y-[-50%] h-[50vh]" style={{ perspective: "2500px" }}>
+            <div className="w-1/2 fixed right-10 top-[50%] translate-y-[-50%] h-[50vh] " style={{ perspective: "2500px" }}>
                 {/* Inner container handles the GSAP entrance animation */}
                 <div className="productContainerEntrance w-full h-full" style={{ transformStyle: 'preserve-3d' }}>
                     {/* Inner container handles the 3D perspective and rotations */}
@@ -146,20 +146,20 @@ function Products({ isProduct }) {
                             transform: `rotateY(${-productCounter * 72}deg) rotateX(${productCounter * 2}deg) rotateZ(-5deg)`,
                             transition: 'transform 1.5s ease'
                         }}
-                        className="productContainer w-full h-full ">
-                        <div className="productCard1 w-[60%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] aspect-[1/1.5] ">
+                        className="productContainer relative w-full h-full ">
+                        <div className="productCard1 w-[60%] absolute left-[50%]  top-[50%]  aspect-[1/1.5] ">
                             <div className="w-[80%] aspect-[1/1.5] bg-[#240E4B] border-gray-600 border absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] rounded-xl "></div>
                         </div>
-                        <div className="productCard2 w-[60%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] aspect-[1/1.5] ">
+                        <div className="productCard2 w-[60%] absolute left-[50%]  top-[50%] aspect-[1/1.5] ">
                             <div className="w-[80%] aspect-[1/1.5] bg-[#240E4B] border-gray-600 border absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] rounded-xl "></div>
                         </div>
-                        <div className="productCard3 w-[60%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] aspect-[1/1.5] ">
+                        <div className="productCard3 w-[60%] absolute left-[50%]  top-[50%] aspect-[1/1.5] ">
                             <div className="w-[80%] aspect-[1/1.5] bg-[#240E4B] border-gray-600 border absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] rounded-xl "></div>
                         </div>
-                        <div className="productCard4 w-[60%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] aspect-[1/1.5] ">
+                        <div className="productCard4 w-[60%] absolute left-[50%]  top-[50%] aspect-[1/1.5] ">
                             <div className="w-[80%] aspect-[1/1.5] bg-[#240E4B] border-gray-600 border absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] rounded-xl "></div>
                         </div>
-                        <div className="productCard5 w-[60%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] aspect-[1/1.5] ">
+                        <div className="productCard5 w-[60%] absolute left-[50%]  top-[50%] aspect-[1/1.5] ">
                             <div className="w-[80%] aspect-[1/1.5] bg-[#240E4B] border-gray-600 border absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] rounded-xl "></div>
                         </div>
                     </div>
