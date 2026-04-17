@@ -27,11 +27,9 @@ h1 {
 }
 
 .trickBox {
-  background-image: url("assets/SecondPage.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transform: rotateX(20deg) rotateY(10deg) perspective(1000px);
   border-radius: 10px;
 }
 

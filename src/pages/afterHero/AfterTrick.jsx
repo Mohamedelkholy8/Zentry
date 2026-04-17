@@ -1,6 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import img from "../../assets/SecondPage.png"
+
 gsap.registerPlugin(useGSAP);
 
 
@@ -81,8 +83,8 @@ function AfterTrick() {
   });
   return (
     <div id="trickWindow" className="relative h-screen w-screen flex justify-center items-center overflow-visible">
-      <div ref={trickRef} className="w-[300px] h-[400px] trickBox"></div>
-      <div className="absolute bottom-16 text-center text-[9px] font-medium z-[100] ">
+      <div ref={trickRef} style={{perspective : '500px' , backgroundImage: `url(${img})` }} className="w-[300px] h-[400px] trickBox"></div>
+      <div className="absolute bottom-16 text-center text-[9px] font-medium z-[-1] ">
         <h6 className="font-semibold">A Programmable reality for Human-AI co-evolution</h6>
         <p className="opacity-[0.5]">Your journy fuels richer data, smarter agents, and<br/>cicilization-scale intelligence, all white<br/>rewarding you.</p>
       </div>
