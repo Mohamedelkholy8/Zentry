@@ -86,7 +86,7 @@ function AfterTrick() {
       <div ref={trickRef} style={{ backgroundImage: `url(${img})` }} className=" w-[300px] h-[400px] trickBox"></div>
       <div className="absolute bottom-16 text-center text-[9px] font-medium z-[-1] ">
         <h6 className="font-semibold">A Programmable reality for Human-AI co-evolution</h6>
-        <p className="opacity-[0.5] bg-red-600">Your journy fuels richer data, smarter agents, and<br/>cicilization-scale intelligence, all white<br/>rewarding you.</p>
+        <p className="opacity-[0.5] ">Your journy fuels richer data, smarter agents, and<br/>cicilization-scale intelligence, all white<br/>rewarding you.</p>
       </div>
     </div>
   )
